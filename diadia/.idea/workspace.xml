@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8688de6e-05c4-4955-880f-52e1f3c65e49" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1Zu3YGNsVVmUZJ7RjH4INPW7lzh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.DiaDia">
+    <configuration name="DiaDia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.uniroma3.diadia.DiaDia" />
+      <module name="diadia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniroma3.diadia.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BorsaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diadia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniroma3.diadia.giocatore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.uniroma3.diadia.giocatore" />
+      <option name="MAIN_CLASS_NAME" value="it.uniroma3.diadia.giocatore.BorsaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartitaTest.testStanzaIniziale" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diadia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.uniroma3.diadia.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.uniroma3.diadia" />
+      <option name="MAIN_CLASS_NAME" value="it.uniroma3.diadia.PartitaTest" />
+      <option name="METHOD_NAME" value="testStanzaIniziale" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DiaDia" />
+        <item itemvalue="JUnit.BorsaTest" />
+        <item itemvalue="JUnit.PartitaTest.testStanzaIniziale" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8688de6e-05c4-4955-880f-52e1f3c65e49" name="Default Changelist" comment="" />
+      <created>1585675197249</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585675197249</updated>
+      <workItem from="1585675202675" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="3746" height="540" key="GridCell.Tab.0.bottom" timestamp="1586528066163">
+      <screen x="0" y="53" width="3840" height="2055" />
+    </state>
+    <state width="3746" height="540" key="GridCell.Tab.0.bottom/0.53.3840.2055@0.53.3840.2055" timestamp="1586528066163" />
+    <state width="3746" height="540" key="GridCell.Tab.0.center" timestamp="1586528066161">
+      <screen x="0" y="53" width="3840" height="2055" />
+    </state>
+    <state width="3746" height="540" key="GridCell.Tab.0.center/0.53.3840.2055@0.53.3840.2055" timestamp="1586528066161" />
+    <state width="3746" height="540" key="GridCell.Tab.0.left" timestamp="1586528066161">
+      <screen x="0" y="53" width="3840" height="2055" />
+    </state>
+    <state width="3746" height="540" key="GridCell.Tab.0.left/0.53.3840.2055@0.53.3840.2055" timestamp="1586528066161" />
+    <state width="3746" height="540" key="GridCell.Tab.0.right" timestamp="1586528066163">
+      <screen x="0" y="53" width="3840" height="2055" />
+    </state>
+    <state width="3746" height="540" key="GridCell.Tab.0.right/0.53.3840.2055@0.53.3840.2055" timestamp="1586528066163" />
+    <state x="890" y="323" width="2048" height="1661" key="SettingsEditor" timestamp="1586527054831">
+      <screen x="0" y="53" width="3840" height="2055" />
+    </state>
+    <state x="890" y="323" width="2048" height="1661" key="SettingsEditor/0.53.3840.2055@0.53.3840.2055" timestamp="1586527054831" />
+  </component>
+</project>
