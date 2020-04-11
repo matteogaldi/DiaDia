@@ -61,20 +61,39 @@ public class BorsaTest {
      * */
     @Test
     public void testRemoveAttrezzo() {
-		borsaQuasiVuota.removeAttrezzo(attrezzoUno.getNome());
-		assertTrue("Dovrebbe essere vuoto", borsaQuasiVuota.isEmpty());
+        borsaQuasiVuota.removeAttrezzo(attrezzoUno.getNome());
+        assertTrue("Dovrebbe essere vuoto", borsaQuasiVuota.isEmpty());
     }
 
     @Test
-	public void testRemoveAttrezzoBorsaVuota() {
-		assertNull("Dovrebbe essere null", borsa.removeAttrezzo(attrezzoUno.getNome()));
-	}
+    public void testRemoveAttrezzoBorsaVuota() {
+        assertNull("Dovrebbe essere null", borsa.removeAttrezzo(attrezzoUno.getNome()));
+    }
 
-	@Test
-	public void testRemoveAttrezzoBorsaVuotaToString() {
-    	borsaQuasiVuota.removeAttrezzo("Uno");
-    	assertEquals("Dovrebbe essere vuota","Borsa vuota", borsaQuasiVuota.toString());
-	}
+    @Test
+    public void testRemoveAttrezzoBorsaVuotaToString() {
+        borsaQuasiVuota.removeAttrezzo("Uno");
+        assertEquals("Dovrebbe essere vuota", "Borsa vuota", borsaQuasiVuota.toString());
+    }
+
+
+    /*
+     * Test getAttrezzo
+     * */
+    @Test
+    public void testGetAttrezzo() {
+        assertEquals("Dovrebbero essere uguali", attrezzoUno, borsaQuasiVuota.getAttrezzo(attrezzoUno.getNome()));
+    }
+
+    @Test
+    public void testGetAttrezzoInesistente() {
+        assertNull("Dovrebbe essere null", borsaQuasiVuota.getAttrezzo(attrezzoDue.getNome()));
+    }
+
+    @Test
+    public void testGetAttrezzoNull() {
+        assertNull("Dovrebbe essere null", borsaQuasiVuota.getAttrezzo(""));
+    }
 
 
 }

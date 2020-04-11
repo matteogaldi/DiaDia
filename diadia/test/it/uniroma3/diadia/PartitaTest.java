@@ -35,7 +35,7 @@ public class PartitaTest {
 	@Test
 	public void testSetStanzaCorrente() {
 		partita.setStanzaCorrente(provaStanza);
-		assertEquals("StanzaCorrente non è aggiornata correttamente", provaStanza,
+		assertEquals("StanzaCorrente non ï¿½ aggiornata correttamente", provaStanza,
 				partita.getStanzaCorrente());
 	}
 	
@@ -50,11 +50,8 @@ public class PartitaTest {
 		partita.setStanzaCorrente(stanzaVincente);
 		assertEquals("Dovrebbe aver vinto", stanzaVincente.toString(), partita.getStanzaCorrente().toString());
 	}
-	public void testStanzaVincenteNull() {
-		partita.setStanzaCorrente(null);
-		assertNull("Dovrebbe essere null", partita.getStanzaVincente());
-	}
-	
+
+
 	// TEST isFinita
 	@Test 
 	public void testParitaFinitaNoCfu() {

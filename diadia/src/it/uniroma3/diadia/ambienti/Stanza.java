@@ -17,7 +17,7 @@ import it.uniroma3.diadia.attrezzi.Attrezzo;
 public class Stanza {
 
     static final private int NUMERO_MASSIMO_DIREZIONI = 4;
-    static final private int NUMERO_MASSIMO_ATTREZZI = 10;
+    static final private int NUMERO_MASSIMO_ATTREZZI = 3;
 
     private String nome;
     private Attrezzo[] attrezzi;
@@ -188,15 +188,17 @@ public class Stanza {
      * @return true se l'attrezzo e' stato rimosso, false altrimenti
      */
     public boolean removeAttrezzo(Attrezzo attrezzo) {
-        Attrezzo a = this.getAttrezzo(attrezzo.getNome());
-        for (int i = 0; i < this.attrezzi.length; i++) {
-            if (this.attrezzi[i] == a) {
-                attrezzi[i] = null;
-				for (int j = i; j < numeroAttrezzi-1; j++) {
-					attrezzi[j] = attrezzi[j+1];
-				}
-                this.numeroAttrezzi--;
-                return true;
+        if (attrezzo != null) {
+            Attrezzo a = this.getAttrezzo(attrezzo.getNome());
+            for (int i = 0; i < this.attrezzi.length; i++) {
+                if (this.attrezzi[i] == a) {
+                    attrezzi[i] = null;
+                    for (int j = i; j < numeroAttrezzi - 1; j++) {
+                        attrezzi[j] = attrezzi[j + 1];
+                    }
+                    this.numeroAttrezzi--;
+                    return true;
+                }
             }
         }
         return false;
