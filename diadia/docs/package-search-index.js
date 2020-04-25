@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"it.uniroma3.diadia"},{"l":"it.uniroma3.diadia.ambienti"},{"l":"it.uniroma3.diadia.attrezzi"},{"l":"it.uniroma3.diadia.giocatore"}]

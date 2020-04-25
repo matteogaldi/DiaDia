@@ -58,6 +58,13 @@ public class Borsa {
         return this.getAttrezzo(nomeAttrezzo) != null;
     }
 
+    /**
+     * Rimuove l'attrezzo dalla borsa e ritorna l'attrezzo che è
+     * stato rimosso
+     * 
+     * @param nomeAttrezzo stringa che identifica il nome dell'attrezzo
+     * @return a l'attrezzo che è stato rimosso
+     */
     public Attrezzo removeAttrezzo(String nomeAttrezzo) {
         Attrezzo a = this.getAttrezzo(nomeAttrezzo);
         for (int i = 0; i < this.attrezzi.length; i++) {
