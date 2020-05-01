@@ -5,20 +5,21 @@
 - [x] ~~comando non valido~~
 - [x] ~~fabbrica di comandi~~
 - [x] ~~fabbrica di comandi fisarmonica~~
-- [ ] creazione interfaccia IO per astrazione iOConsole
-- [ ] introduzione stanza magica
-- [ ] realizzare stanza protected
-- [ ] realizzare stanza buia
-- [ ] realizzate stanza bloccata
-- [ ] I/O Simulator
+- [x] creazione interfaccia IO per astrazione iOConsole
+- [x] introduzione stanza magica
+- [x] realizzare stanza protected
+- [x] realizzate stanza bloccata
+- [x] realizzare stanza buia
+- [ ] I/O Simulator (FACOLTATIVO)
 
 ## Testing
+- [x] test stanza bloccata
+- [x] test stanza buia
+- [ ] test stanza magica
 - [ ] test comando "vai"
 - [ ] test comando "posa"
 - [ ] test comando "prendi"
 - [ ] test FabbricaDiComandi
-- [ ] test stanza buia
-- [ ] test stanza bloccata
 
 ### Checklist pre-consegna
 - [ ] no chiamate tramite system.in/out
