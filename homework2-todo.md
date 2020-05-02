@@ -15,11 +15,11 @@
 ## Testing
 - [x] test stanza bloccata
 - [x] test stanza buia
-- [ ] test stanza magica
-- [ ] test comando "vai"
-- [ ] test comando "posa"
-- [ ] test comando "prendi"
-- [ ] test FabbricaDiComandi
+- [x] test comando "vai"
+- [x] test comando "posa"
+- [x] test comando "prendi"
+- [x] test FabbricaDiComandi
+- [x] test stanza magica
 
 ### Checklist pre-consegna
 - [ ] no chiamate tramite system.in/out
