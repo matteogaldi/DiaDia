@@ -12,24 +12,31 @@ public class ComandoPosa implements Comando {
 	public void esegui(Partita partita) {
 		Attrezzo a = null;
 		if (attrezzo == null) {
-			iO.mostraMessaggio("Cosa vuoi posare?");
+			if (iO != null)
+				iO.mostraMessaggio("Cosa vuoi posare?");
 		} else {
 			if (partita.getGiocatore().getBorsa().hasAttrezzo(attrezzo)) {
 				a = partita.getGiocatore().getBorsa().getAttrezzo(attrezzo);
 				partita.getGiocatore().getBorsa().removeAttrezzo(attrezzo);
 				if (partita.getStanzaCorrente().addAttrezzo(a)) {
-					iO.mostraMessaggio("Hai posato " + a.toString());
+					if (iO != null)
+						iO.mostraMessaggio("Hai posato " + a.toString());
 				}
 			} else {
-				iO.mostraMessaggio("Non possiedi questo oggetto");
+				if (iO != null)
+					iO.mostraMessaggio("Non possiedi questo oggetto");
 			}
 		}
-		
+
 	}
 
 	@Override
 	public void setParametro(String parametro) {
-		this.attrezzo = parametro;		
+		this.attrezzo = parametro;
+	}
+
+	public String getParametro() {
+		return this.attrezzo;
 	}
 
 	@Override
@@ -41,7 +48,12 @@ public class ComandoPosa implements Comando {
 	@Override
 	public void setIO(IO io) {
 		this.iO = io;
-		
+
+	}
+	
+	@Override
+	public String getNome() {
+		return "posa";
 	}
 
 }

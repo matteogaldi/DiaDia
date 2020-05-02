@@ -32,4 +32,15 @@ public class ComandoFine implements Comando{
 		
 	}
 
+	@Override
+	public String getParametro() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public String getNome() {
+		return "fine";
+	}
+
 }

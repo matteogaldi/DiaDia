@@ -11,9 +11,12 @@ public class ComandoVai implements Comando {
 	@Override
 	public void esegui(Partita partita) {
 		if (direzione == null)
-			iO.mostraMessaggio("Dove vuoi andare ?");
+			if (iO != null) {
+				iO.mostraMessaggio("Dove vuoi andare ?");
+			}
 		Stanza prossimaStanza = null;
 		prossimaStanza = partita.getStanzaCorrente().getStanzaAdiacente(direzione);
+
 		if (prossimaStanza == null)
 			iO.mostraMessaggio("Direzione inesistente");
 		else {
@@ -21,6 +24,7 @@ public class ComandoVai implements Comando {
 			int cfu = partita.getGiocatore().getCfu();
 			partita.getGiocatore().setCfu(--cfu);
 		}
+
 		iO.mostraMessaggio(partita.getStanzaCorrente().getDescrizione());
 	}
 
@@ -39,5 +43,15 @@ public class ComandoVai implements Comando {
 	public void setIO(IO io) {
 		this.iO = io;
 
+	}
+
+	@Override
+	public String getParametro() {
+		return this.direzione;
+	}
+	
+	@Override
+	public String getNome() {
+		return "vai";
 	}
 }

@@ -30,4 +30,14 @@ public class ComandoAiuto implements Comando {
 		this.iO = io;
 	}
 
+	@Override
+	public String getParametro() {
+		return null;
+	}
+
+	@Override
+	public String getNome() {
+		return "aiuto";
+	}
+
 }
