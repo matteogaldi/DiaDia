@@ -104,16 +104,6 @@ public class StanzaTest {
      */
 
     @Test
-    public void testGetStanzaAdiacenteVuota() {
-        assertEquals("Errore descrizione stanza adiacente vuota ", "stanza adiacente ma vuota\nUscite:  nord est ovest sud\nAttrezzi nella stanza: ", this.stanzaAdiacenteVuota.getDescrizione());
-    }
-
-    @Test
-    public void testGetStanzaPiena() {
-        assertEquals("Errore descrizione stanza piena ", "stanza piena\nUscite: \nAttrezzi nella stanza: accetta (8kg) cacciavite (1kg) coltello (2kg) ", this.stanzaPiena.getDescrizione());
-    }
-
-    @Test
     public void testStanzaVuota() {
         assertEquals("Errore descrizione stanza vuota ", "stanza vuota\nUscite: \nAttrezzi nella stanza: ", this.stanzaNulla.getDescrizione());
     }
