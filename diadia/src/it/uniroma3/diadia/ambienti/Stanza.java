@@ -21,6 +21,7 @@ import it.uniroma3.diadia.attrezzi.Attrezzo;
 public class Stanza {
 
 	static final private int NUMERO_MASSIMO_ATTREZZI = 3;
+	static final private int NUMERO_MASSIMO_DIREZIONI = 4;
 
 	private String nome;
 	private Set<Attrezzo> attrezzi;
@@ -48,6 +49,9 @@ public class Stanza {
 	 *                  parametro.
 	 */
 	public void impostaStanzaAdiacente(String direzione, Stanza stanza) {
+		if (this.stanzeAdiacenti.size() >= NUMERO_MASSIMO_DIREZIONI) {
+			return;
+		}
 		this.stanzeAdiacenti.put(direzione, stanza);
 	}
 
@@ -113,24 +117,19 @@ public class Stanza {
 	 * @return la rappresentazione stringa
 	 */
 	public String toString() {
-		Iterator<String> direzioni = this.stanzeAdiacenti.keySet().iterator();
-		Iterator<Attrezzo> attrezzi = this.attrezzi.iterator();
 		StringBuilder risultato = new StringBuilder();
 		risultato.append(this.nome);
 		risultato.append("\nUscite: ");
-		while (direzioni.hasNext()) {
-			String direzione = direzioni.next();
-			if (direzione != null)
-				risultato.append(" " + direzione);
-		}
-		risultato.append("\nAttrezzi nella stanza: ");
-		while (attrezzi.hasNext()) {
-			Attrezzo attrezzo = attrezzi.next();
-			if (attrezzo != null) {
-				risultato.append(attrezzo.toString() + " ");
-			}
 
+		if (!this.stanzeAdiacenti.isEmpty()) {
+			risultato.append(this.stanzeAdiacenti.keySet());
 		}
+
+		risultato.append("\nAttrezzi nella stanza: ");
+		if (!this.attrezzi.isEmpty()) {
+			risultato.append(this.attrezzi.toString());
+		}
+
 		return risultato.toString();
 	}
 
