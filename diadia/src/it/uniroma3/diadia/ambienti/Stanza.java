@@ -2,6 +2,7 @@ package it.uniroma3.diadia.ambienti;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -112,15 +113,19 @@ public class Stanza {
 	 * @return la rappresentazione stringa
 	 */
 	public String toString() {
-		Set<String> direzioni = this.stanzeAdiacenti.keySet();
+		Iterator<String> direzioni = this.stanzeAdiacenti.keySet().iterator();
+		Iterator<Attrezzo> attrezzi = this.attrezzi.iterator();
 		StringBuilder risultato = new StringBuilder();
 		risultato.append(this.nome);
 		risultato.append("\nUscite: ");
-		for (String direzione : direzioni)
+		while (direzioni.hasNext()) {
+			String direzione = direzioni.next();
 			if (direzione != null)
 				risultato.append(" " + direzione);
+		}
 		risultato.append("\nAttrezzi nella stanza: ");
-		for (Attrezzo attrezzo : this.attrezzi) {
+		while (attrezzi.hasNext()) {
+			Attrezzo attrezzo = attrezzi.next();
 			if (attrezzo != null) {
 				risultato.append(attrezzo.toString() + " ");
 			}
@@ -135,9 +140,11 @@ public class Stanza {
 	 * @return true se l'attrezzo esiste nella stanza, false altrimenti.
 	 */
 	public boolean hasAttrezzo(String nomeAttrezzo) {
+		Iterator<Attrezzo> i = this.attrezzi.iterator();
 		boolean trovato;
 		trovato = false;
-		for (Attrezzo attrezzo : this.attrezzi) {
+		while (i.hasNext()) {
+			Attrezzo attrezzo = i.next();
 			if (attrezzo == null) {
 				return false;
 			}
@@ -156,10 +163,14 @@ public class Stanza {
 	 * @return l'attrezzo presente nella stanza. null se l'attrezzo non e' presente.
 	 */
 	public Attrezzo getAttrezzo(String nomeAttrezzo) {
-		for (Attrezzo attrezzo : this.attrezzi)
+		Iterator<Attrezzo> i = this.attrezzi.iterator();
+		while (i.hasNext()) {
+			Attrezzo attrezzo = i.next();
 			if (attrezzo.getNome().equals(nomeAttrezzo)) {
 				return attrezzo;
 			}
+		}
+
 		return null;
 	}
 

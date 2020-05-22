@@ -1,6 +1,7 @@
 package it.uniroma3.diadia.giocatore;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 import it.uniroma3.diadia.attrezzi.Attrezzo;
@@ -36,16 +37,21 @@ public class Borsa {
 	}
 
 	public Attrezzo getAttrezzo(String nomeAttrezzo) {
-		for (Attrezzo attrezzo : this.attrezzi)
+		Iterator<Attrezzo> i = this.attrezzi.iterator();
+		while (i.hasNext()) {
+			Attrezzo attrezzo = i.next();
 			if (attrezzo.getNome().equals(nomeAttrezzo)) {
 				return attrezzo;
 			}
+		}
 		return null;
 	}
 
 	public int getPeso() {
+		Iterator<Attrezzo> i = this.attrezzi.iterator();
 		int peso = 0;
-		for (Attrezzo a : this.attrezzi) {
+		while (i.hasNext()) {
+			Attrezzo a = i.next();
 			peso += a.getPeso();
 		}
 		return peso;
@@ -73,11 +79,15 @@ public class Borsa {
 	}
 
 	public String toString() {
+		Iterator<Attrezzo> i = this.attrezzi.iterator();
 		StringBuilder s = new StringBuilder();
 		if (!this.isEmpty()) {
 			s.append("Contenuto borsa (" + this.getPeso() + "kg/" + this.getPesoMax() + "kg): ");
-			for (Attrezzo a : this.attrezzi)
+			while (i.hasNext()) {
+				Attrezzo a = i.next();
 				s.append(a.toString() + " ");
+			}
+
 		} else
 			s.append("Borsa vuota");
 		return s.toString();
