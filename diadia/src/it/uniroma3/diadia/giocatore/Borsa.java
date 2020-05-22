@@ -1,10 +1,18 @@
 package it.uniroma3.diadia.giocatore;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.attrezzi.ComparatorePeso;
 
 public class Borsa {
 	public final static int DEFAULT_PESO_MAX_BORSA = 10;
@@ -91,5 +99,32 @@ public class Borsa {
 		} else
 			s.append("Borsa vuota");
 		return s.toString();
+	}
+
+	public List<Attrezzo> getContenutoOrdinatoPerPeso() {
+		List<Attrezzo> result = new ArrayList<Attrezzo>(this.attrezzi);
+		Collections.sort(result, new ComparatorePeso());
+		return result;
+	}
+
+	public SortedSet<Attrezzo> getContenutoOrdinatoPerNome() {
+		return new TreeSet<Attrezzo>(this.attrezzi);
+	}
+
+	public Map<Integer, Set<Attrezzo>> getContenutoRaggruppatoPerPeso() {
+		Map<Integer, Set<Attrezzo>> result = new HashMap<Integer, Set<Attrezzo>>();
+		Set<Attrezzo> temp;
+		for (Attrezzo a : this.attrezzi) {
+			if (result.containsKey(a.getPeso())) {
+				temp = result.get(a.getPeso());
+				temp.add(a);
+			} else {
+				temp = new TreeSet<Attrezzo>();
+				temp.add(a);
+				result.put(a.getPeso(), temp);
+			}
+		}
+		return result;
+
 	}
 }
