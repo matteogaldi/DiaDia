@@ -16,7 +16,7 @@ import it.uniroma3.diadia.attrezzi.ComparatorePeso;
 
 public class Borsa {
 	public final static int DEFAULT_PESO_MAX_BORSA = 10;
-	private Set<Attrezzo> attrezzi;
+	private List<Attrezzo> attrezzi;
 	private int numeroAttrezzi;
 	private int pesoMax;
 
@@ -26,7 +26,7 @@ public class Borsa {
 
 	public Borsa(int pesoMax) {
 		this.pesoMax = pesoMax;
-		this.attrezzi = new HashSet<Attrezzo>();
+		this.attrezzi = new ArrayList<Attrezzo>();
 		this.numeroAttrezzi = 0;
 	}
 

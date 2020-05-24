@@ -16,7 +16,7 @@ public class StanzaBuiaTest {
 	public void setUp() {
 		this.messaggio = "qui c'è buio pesto";
 		this.attrezzo = new Attrezzo("attrezzo", 3);
-		this.stanza = new StanzaBuia("stanza", attrezzo);
+		this.stanza = new StanzaBuia("stanza", attrezzo.getNome());
 	}
 
 	@Test

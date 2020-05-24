@@ -7,11 +7,15 @@ import org.junit.Test;
 
 public class LabirintoTest {
 	
-	private Labirinto labirinto;
+	private Labirinto labirinto, builder;
 	
 	@Before
 	public void setUp() {
-		this.labirinto = new Labirinto();
+		this.builder = new LabirintoBuilder()
+				.addStanzaIniziale("iniziale")
+				.addStanzaVincente("vincente")
+				.getLabirinto();
+		this.labirinto = builder;
 	}
 	
 	@Test

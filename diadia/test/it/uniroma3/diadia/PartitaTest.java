@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.LabirintoBuilder;
 import it.uniroma3.diadia.ambienti.Stanza;
 
 import org.junit.Before;
@@ -18,8 +19,12 @@ public class PartitaTest {
 
 	@Before
 	public void setUp() {
-		this.partita = new Partita();
-		this.labirinto = new Labirinto();
+		this.labirinto = new LabirintoBuilder()
+				.addStanzaIniziale("iniziale")
+				.addStanzaVincente("vincente")
+				.getLabirinto();
+		this.partita = new Partita(labirinto);
+		
 		this.stanzaVincente = this.labirinto.getStanzaVincente();
 		this.provaStanza = new Stanza("Prova");
 
@@ -52,7 +57,7 @@ public class PartitaTest {
 	// TEST isFinita
 	@Test
 	public void testParitaFinitaNoCfu() {
-		partita.giocatore.setCfu(0);
+		partita.getGiocatore().setCfu(0);
 		assertTrue("Dovrebbe essere finita", partita.isFinita());
 	}
 

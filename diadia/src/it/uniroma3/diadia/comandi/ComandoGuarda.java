@@ -9,7 +9,7 @@ public class ComandoGuarda implements Comando {
 
 	@Override
 	public void esegui(Partita partita) {
-		iO.mostraMessaggio(partita.getStanzaCorrente().toString());
+		iO.mostraMessaggio(partita.getStanzaCorrente().getDescrizione());
 
 	}
 

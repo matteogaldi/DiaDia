@@ -16,7 +16,7 @@ public class StanzaBloccataTest {
 	@Before
 	public void setUp() {
 		this.attrezzo = new Attrezzo("attrezzo", 5);
-		this.stanza = new StanzaBloccata("stanzaBloccata", "nord", this.attrezzo);
+		this.stanza = new StanzaBloccata("stanzaBloccata", "nord", this.attrezzo.getNome());
 		this.stanzaAdiacente = new Stanza("stanzaAdiacente");
 		this.stanza.impostaStanzaAdiacente("nord", stanzaAdiacente);
 		this.messaggio.append(this.attrezzo.getNome());
